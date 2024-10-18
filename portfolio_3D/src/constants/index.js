@@ -7,6 +7,20 @@ import{
   accenture,
   amazon,
   meta,
+  javascript,
+  androidstudio,
+  html,
+  css,
+  reactjs,
+  php,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  blender,
+  docker,
+  threejs,
+  
 } from '../assets'
 
 
@@ -99,5 +113,61 @@ export const navLinks = [
     },
   ];
 
-  export {services, experiences};
+  //Known ++technologies
+  const technologies = [
+    {
+      name: "HTML 5",
+      icon: html,
+    },
+    {
+      name: "CSS 3",
+      icon: css,
+    },
+    {
+      name: "JavaScript",
+      icon: javascript,
+    },
+    {
+      name: "Android",
+      icon: androidstudio,
+    },
+    {
+      name: "React JS",
+      icon: reactjs,
+    },
+    {
+      name: "PHP",
+      icon: php,
+    },
+    {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "MongoDB",
+      icon: mongodb,
+    },
+    {
+      name: "Three JS",
+      icon: threejs,
+    },
+    {
+      name: "git",
+      icon: git,
+    },
+    {
+      name: "Blender",
+      icon: blender,
+    },
+    {
+      name: "docker",
+      icon: docker,
+    },
+  ];
+
+  export {services, experiences, technologies};
   
