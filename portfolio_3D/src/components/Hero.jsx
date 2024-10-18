@@ -16,9 +16,9 @@ const Hero = () => {
       <div className='absolute top-[120px] sm:w-3/5 w-full flex flex-col justify-center items-start gap-2.5 px-14 py-9 sm:px-28 sm:py-14 h-[80v]'>
         <h2 className='text-[#915eff] text-[1.2rem] font-medium'>Web Designer</h2>
         <h1 className='sm:text-[4rem] sm:leading-[5rem] text-[2.5rem] leading-[3.2rem] font-medium'>
-          Hello My Name is <span className='text-[#915eff] text-bold font-bold'><b>Ravi K.K.</b></span>
+          Hello My Name is <span className='text-[#915eff] text-bold font-bold '><b><br />Ravi K.K.</b></span>
           <br />
-          <div className='sm:block hidden'>
+          <div className=''>
             I'm a&nbsp;
             <DynamicText />
           </div>

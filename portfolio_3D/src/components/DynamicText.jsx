@@ -17,7 +17,7 @@ const DynamicText = () => {
           };
     }, []);
   return (
-    <span className='text-[4rem] leading-[5rem] text-[#915eff] font-bold' ref={el}></span>
+    <span className='sm:text-[4rem] sm:leading-[5rem] text-3xl leading-5 text-[#915eff] font-bold' ref={el}></span>
   )
 }
 
