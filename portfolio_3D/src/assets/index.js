@@ -25,6 +25,11 @@ import tailwind from "./tech/tailwind.png";
 import androidstudio from "./tech/androidstudio.png";
 import threejs from "./tech/threejs.svg";
 
+import github from './github.png'
+import bitc from './bitc.gif'
+import bazar from './bazar.png'
+import swiftexit from './swiftexit.png'
+
 export {
     //Navbar
     logo,
@@ -53,4 +58,9 @@ export {
     tailwind,
     androidstudio,
     threejs,
+    //work
+    github,
+    bitc,
+    swiftexit,
+    bazar,
 };

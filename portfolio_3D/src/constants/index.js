@@ -20,7 +20,9 @@ import{
   blender,
   docker,
   threejs,
-  
+  bitc,
+  bazar,
+  swiftexit,
 } from '../assets'
 
 
@@ -169,5 +171,72 @@ export const navLinks = [
     },
   ];
 
-  export {services, experiences, technologies};
+  //Works
+  const projects = [
+    {
+      name: "BIT-Chat",
+      description:
+        "A Crypto Web-based platform that allows users intract/ chat from various people, providing a convenient and efficient solution for communication needs.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: bitc,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "3D Bazar",
+      description:
+        "The project is an e-commerce web portal which has an online interface in a form of a e-commerce website that will allow users to buy, sell or view the 3d assets",
+      tags: [
+        {
+          name: "django",
+          color: "green-text-gradient",
+        },
+        {
+          name: "python",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "mysql",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: bazar,
+      source_code_link: "https://github.com/Ravikk-web/3d-bazar",
+    },
+    {
+      name: "Swift Exit",
+      description:
+        "A comprehensive app using QR authentication to manage the exit-pass of college students by reducing the paper work through automation pfgenerating gate pass process.",
+      tags: [
+        {
+          name: "java",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "android-studio",
+          color: "green-text-gradient",
+        },
+        {
+          name: "firebase",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: swiftexit,
+      source_code_link: "https://github.com/Ravikk-web/Gate-Pass-App_QR/tree/master",
+    },
+  ];
+
+  export {services, experiences, technologies, projects, };
   
