@@ -87,8 +87,11 @@ const Works = () => {
                 <ProjectCard key={`project-${index}`} index={index}  {...project} />
             ))}
         </div>
+        <div className="w-full mt-3 text-secondary text-[17px] leading-[30px] italic text-center pt-4">
+            ✔ Click on the Github Icon to view the project...
+        </div>
     </>
   )
 }
 
-export default SectionWrapper(Works, "")
+export default SectionWrapper(Works, "Projects")

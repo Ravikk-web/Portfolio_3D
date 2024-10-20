@@ -238,5 +238,33 @@ export const navLinks = [
     },
   ];
 
-  export {services, experiences, technologies, projects, };
+  //Feedbacks
+  const testimonials = [
+    {
+      testimonial:
+        "I thought it was impossible to make a website as beautiful as our product, but Ravi proved me wrong.",
+      name: "Elon Musk",
+      designation: "CEO",
+      company: "Spacex",
+      image: "https://api.time.com/wp-content/uploads/2017/04/elon-musk.jpg?quality=75&w=1080",
+    },
+    {
+      testimonial:
+        "I've never met a web developer who truly cares about their clients' success like Ravi does.",
+      name: "Jensen Huang",
+      designation: "CEO",
+      company: "Nvidia Corp",
+      image: "https://fortune.com/img-assets/wp-content/uploads/2024/06/GettyImages-1820547400.jpg?w=1440&q=75",
+    },
+    {
+      testimonial:
+        "After Ravi optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      name: "Ajay Vij",
+      designation: "MD",
+      company: "Accenture India",
+      image: "https://exchange4media.gumlet.io/news-photo/127157-Ajay-Vij.jpg",
+    },
+  ];
+
+  export {services, experiences, technologies, projects, testimonials };
   
