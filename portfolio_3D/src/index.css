@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  /* --prime-color: #804dee; */
+  --prime-color: #2FB297;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +16,15 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .hash-span {
@@ -39,11 +53,11 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: var(--prime-color);
+  background: linear-gradient(-90deg, var(--prime-color) 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    var(--prime-color) 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }
@@ -59,8 +73,8 @@
 
 .green-pink-gradient {
   background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: linear-gradient(90.13deg, #00cea8 1.9%, var(--prime-color) 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, var(--prime-color) 97.5%);
 }
 
 .orange-text-gradient {

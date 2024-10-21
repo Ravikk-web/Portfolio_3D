@@ -15,13 +15,11 @@ function App() {
   return (
     <BrowserRouter>
     <div className="relative z-0">
-    <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center bg-fixed custom-border-radius">
+    <div className="bg-zinc-300 text-black bg-cover bg-no-repeat bg-center bg-fixed custom-border-radius">
       <Navbar />
       <Hero />
     </div>
     <About />
-    {/* Car animation  */}
-    <div className="text-center w-full bg-white text-black font-semibold text-3xl">!!! Need to add car animation here</div>
     <Experience />
     <Skills />
     <Works />

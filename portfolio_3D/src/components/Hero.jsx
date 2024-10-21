@@ -3,9 +3,11 @@ import { styles } from '../styles'
 import DynamicText from './DynamicText'
 import { motion } from 'framer-motion'
 import { Canvas } from '@react-three/fiber'
-import Laptop from '../models/Laptop'
 import Loader from '../utils/Loader'
+import dynamic from 'next/dynamic'
+import { ScrollControls } from '@react-three/drei'
 
+const Laptop = dynamic(import('../models/Laptop'))
 
 const Hero = () => {
 
@@ -13,7 +15,7 @@ const Hero = () => {
     const handleScroll = () => {
       const myElement = document.getElementById('heroModel');
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      if (scrollY > 400) { // Adjust the scroll value as needed
+      if (scrollY > 100) { // Adjust the scroll value as needed
         myElement.style.opacity = '0';
       } else {
         myElement.style.opacity = '1';
@@ -52,33 +54,31 @@ const Hero = () => {
       </div>
     </div>
       
-    <span className='lg:w-1/3 w-full lg:h-full h-[500px] fixed z-1 lg:mr-20 right-0 lg:top-0 top-2/4 transition-opacity duration-700' id='heroModel'>
+    <span className='w-full lg:h-full h-[500px] lg:top-0 top-2/4 absolute z-1 transition-opacity duration-700' id='heroModel'>
         {/* Canvas */}
       <Canvas
           camera={{
             position: [0, 0, 5],
-            fov: 75,
+            fov: 30,
             near: 0.1,
             far: 1000,
-          }}        
+          }}   
+          gl={{antialias: true}}
+          dpr={[1,1.5]} 
+          shadows={true}    
         >
-          <directionalLight position={[0, 0, 1]} intensity={2.5} />
-          <ambientLight intensity={1} />
-          <pointLight position={[5, 10, 0]} intensity={2} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            intensity={2}
-          />
+          <directionalLight position={[-5, -5, 0]} intensity={2} />
+          <ambientLight intensity={0.8} />
+          <pointLight position={[-2,3,0]} intensity={30} />
 
           <Suspense fallback={<Loader />}>
-            <Laptop 
-              position={[-0.1, -1.8, -0.35]}
-              rotation={[12.629, -0.5, 0]}
-              scale={[1.4, 1.4, 1.4]}
-              fov={[24]}
-            />
+            <ScrollControls damping={0.1} pages={1}>
+              <Laptop
+                position={[2.2, -1.2, -3]}
+                rotation={[12.629, -0.8, 0]}
+                scale={[0.75, 0.75, 0.75]}
+              />
+            </ScrollControls>
           </Suspense>
         </Canvas>
     </span>
