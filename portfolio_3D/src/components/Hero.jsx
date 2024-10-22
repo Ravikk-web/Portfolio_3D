@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { styles } from '../styles'
 import DynamicText from './DynamicText'
 import { motion } from 'framer-motion'
@@ -11,11 +11,26 @@ const Laptop = dynamic(import('../models/Laptop'))
 
 const Hero = () => {
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Set the initial value
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const myElement = document.getElementById('heroModel');
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      if (scrollY > 100) { // Adjust the scroll value as needed
+      if (scrollY > 150) { // Adjust the scroll value as needed
         myElement.style.opacity = '0';
       } else {
         myElement.style.opacity = '1';
@@ -74,9 +89,9 @@ const Hero = () => {
           <Suspense fallback={<Loader />}>
             <ScrollControls damping={0.1} pages={1}>
               <Laptop
-                position={[2.2, -1.2, -3]}
+                position={isMobile ? [-0.2, -1, -2.5] : [2.2, -1.2, -3]}
                 rotation={[12.629, -0.8, 0]}
-                scale={[0.75, 0.75, 0.75]}
+                scale={isMobile ? [0.65, 0.65, 0.65] : [0.75, 0.75, 0.75]}
               />
             </ScrollControls>
           </Suspense>

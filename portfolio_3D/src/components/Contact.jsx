@@ -102,7 +102,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='white-gradient sm:p-16 p-5 rounded-3xl xl:mt-4 flex xl:flex-row flex-col gap-16 overflow-hidden'>
+    <div className='bg-zinc-300 sm:p-16 p-5 rounded-3xl xl:mt-4 flex xl:flex-row flex-col gap-16 overflow-hidden'>
     {alert.show && <Alert {...alert} />}
     {/* <Alert show={true} text={"Hello ravi "} type={'success'} /> */}
       <motion.div
