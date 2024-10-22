@@ -30,7 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="relative z-0">
-        <div className="bg-zinc-300 text-black bg-cover bg-no-repeat bg-center bg-fixed custom-border-radius">
+        <div className="bg-hero-background text-black bg-cover bg-no-repeat bg-center bg-fixed custom-border-radius">
           <Navbar />
           <Hero />
         </div>

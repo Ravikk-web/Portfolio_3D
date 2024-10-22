@@ -45,7 +45,7 @@ const Hero = () => {
 
   return (
     <section className='relative w-full h-screen mx-auto'>
-    <div className='max-w-7xl mx-auto flex flex-row items-start gap-5'>
+    <div className='max-w-full mx-auto flex flex-row items-start gap-5'>
         <div className={`${styles.paddingX} absolute top-[120px]`}>
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-prime' />
@@ -89,7 +89,7 @@ const Hero = () => {
           <Suspense fallback={<Loader />}>
             <ScrollControls damping={0.1} pages={1}>
               <Laptop
-                position={isMobile ? [-0.2, -1, -2.5] : [2.2, -1.2, -3]}
+                position={isMobile ? [-0.2, -1, -2.5] : [2.2, -1.6, -3]}
                 rotation={[12.629, -0.8, 0]}
                 scale={isMobile ? [0.65, 0.65, 0.65] : [0.75, 0.75, 0.75]}
               />
